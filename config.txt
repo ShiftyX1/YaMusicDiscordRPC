@@ -1,1 +1,1 @@
-{"token": "y0_AgAAAAAx1KHAAAG8XgAAAADqbLad8lDKOXAQQxeutQl-MauF1phHZ0k", "update_delay": 3, "start_delay": 0, "rpc_connect": 1163158250309566584}
+{"token": "", "update_delay": 3, "start_delay": 1, "rpc_connect": 1163158250309566584}

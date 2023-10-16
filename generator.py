@@ -2,12 +2,12 @@ import customtkinter
 import sys
 import json
 
-class My_App(customtkinter.CTk):
+class Generator(customtkinter.CTk):
 
     def __init__(self):
         customtkinter.CTk.__init__(self)
         self.title('Генератор конфига для YaMusicRPC by ShiftyX1')
-        self.geometry("1000x200")
+        self.geometry("1050x200")
         self.resizable(False, False)
         self.setUI()
 
@@ -45,7 +45,7 @@ class My_App(customtkinter.CTk):
         self.button_generate = customtkinter.CTkButton(self.bar2, text='Сгенерировать конфиг', command=self.generate_cfg)
         self.button_generate.grid(row=8, column=0, **opts)
 
-        self.label_zatychka = customtkinter.CTkLabel(self.bar2, text='ГОТОВО :) Можете запускать RPC', fg_color='#f5f5f5')
+        self.label_zatychka = customtkinter.CTkLabel(self.bar2, text='ГОТОВО :) Можете запускать RPC', text_color='#282828')
         self.label_zatychka.grid(row=8, column=1, **opts)
 
     def app_exit(self):
@@ -62,9 +62,9 @@ class My_App(customtkinter.CTk):
             json.dump(config, outfile)
         
         opts = { 'ipadx': 5, 'ipady': 5, 'sticky': 'nswe'  }
-        self.label_done = ttk.Label(self.bar2, text='ГОТОВО :) Можете запускать RPC', foreground='#008000')
+        self.label_done = customtkinter.CTkLabel(self.bar2, text='ГОТОВО :) Можете запускать RPC', text_color='#008000')
         self.label_done.grid(row=8, column=1, **opts)
 
 
-root = My_App()
+root = Generator()
 root.mainloop()
