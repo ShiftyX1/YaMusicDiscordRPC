@@ -4,6 +4,7 @@ from pypresence import Presence
 from yandex_music.exceptions import UnauthorizedError
 from yandex_music import Client
 
+# НЕПРАВИЛЬНЫЙ КОД ЗАПИСИ КОНФИГА
 #config = {}
 #config['config'] = []
 #config['config'].append({

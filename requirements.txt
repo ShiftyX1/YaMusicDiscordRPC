@@ -1,0 +1,3 @@
+pypresence
+yandex_music
+customtkinter
