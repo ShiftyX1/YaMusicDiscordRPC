@@ -10,7 +10,7 @@ from yandex_music import Client
 #    "token": str(input('Введите свой токен Я.Музыки')),
 #    "update_delay": 3,
 #    "start_delay": 0,
-#    "rpc_connect": str(input('Введите свой RPC токен'))
+#    "rpc_connect": 1163158250309566584
 #})
 
 #with open('config.txt', 'w') as outfile:
