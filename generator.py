@@ -1,6 +1,8 @@
 import customtkinter
 import sys
 import json
+import os
+import asyncio
 
 class Generator(customtkinter.CTk):
 
@@ -45,6 +47,9 @@ class Generator(customtkinter.CTk):
         self.button_generate = customtkinter.CTkButton(self.bar2, text='Сгенерировать конфиг', command=self.generate_cfg)
         self.button_generate.grid(row=8, column=0, **opts)
 
+        self.button_start = customtkinter.CTkButton(self.bar2, text='Запустить RPC', command=self.start_rpc)
+        self.button_start.grid(row=8, column=6, **opts)
+
         self.label_zatychka = customtkinter.CTkLabel(self.bar2, text='ГОТОВО :) Можете запускать RPC', text_color='#282828')
         self.label_zatychka.grid(row=8, column=1, **opts)
 
@@ -65,6 +70,11 @@ class Generator(customtkinter.CTk):
         self.label_done = customtkinter.CTkLabel(self.bar2, text='ГОТОВО :) Можете запускать RPC', text_color='#008000')
         self.label_done.grid(row=8, column=1, **opts)
 
+    async def start_rpc(self):
+        await os.system('python main.py')
+
 
 root = Generator()
 root.mainloop()
+
+asyncio.run(main())
